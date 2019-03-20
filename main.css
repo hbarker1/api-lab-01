@@ -24,8 +24,8 @@ body {
   }
 
   h1 {
-      color: orangered;
-      background-color: bisque;
+      color: white;
+      background-image: linear-gradient(to right,rgb(247, 114, 66) , orangered);
       padding: 20px;
       font-size: 40pt;
       justify-content: center;
@@ -43,6 +43,9 @@ body {
     height: 300px;
     width: 300px;
     border-radius: 100%;
+    border-style: solid;
+    border-width: medium;
+    border-color: orangered;
     justify-content: center;
     text-align: center;
   }
