@@ -1,14 +1,15 @@
 $(() => {
     $.get("https://www.reddit.com/r/aww/.json", (resolveData) => {
-    
+
+        let title;
+        let img;
     $.each(resolveData.data.children, (i) => {
-        console.log(resolveData.data.children[i].data.title);
-        console.log(resolveData.data.children[i].data.thumbnail);
-        console.log(resolveData.data.children[i].data.url);
+        title = (resolveData.data.children[i].data.title);
+        img = (resolveData.data.children[i].data.thumbnail);
+        url = (resolveData.data.children[i].data.url);
  
 
-       $('.posts').append(`<img src="${resolveData.data.thumbnail}"/>`)
-       
+        $('.container').append(`<img src="${img}"></img><br><div id="title-container">${title}</div><br><div id="link-container">Link: ${url}</div><br>`);
     //    <img src="thumnail"></img>
     //    <div id="title">
     //    "title"</div>
@@ -21,3 +22,4 @@ $(() => {
     });
 
 });
+
